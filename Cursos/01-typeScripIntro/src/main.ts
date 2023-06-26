@@ -6,8 +6,9 @@ import './style.css';
 //import './topics/05-basic-detructuring';
 //import './topics/06-functions-destructuring';
 //import './topics/07-modules';
-import './topics/08-clases';
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <h1>NEIRA CHCHUTMARE
-  </h1>
-`;
+//import './topics/08-clases';
+//import './topics/09-generic';
+//import './topics/10-decorators';
+import './topics/11-optional-chaining';
+const main = document.getElementById('app')!;
+main.innerHTML = '<h1>NEIRA CHCHUTMARE</h1>';
