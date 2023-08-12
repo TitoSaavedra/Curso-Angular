@@ -1,0 +1,31 @@
+<h4><strong>Personajes</strong></h4>
+<ul class="list-group">
+  <li
+    class="list-group-item d-flex justify-content-between aling-items-center"
+    [ngClass]="{
+      'list-group-item-secondary': isFirst,
+      'list-group-item-dark': isLast
+    }"
+    *ngFor="
+      let c of characterList;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+  >
+    <div>
+      <span class="badge bg-primary">{{ i + 1 }}</span>
+    </div>
+    <div>
+      <span class="ms-2">{{ c.power }} - </span>
+      <span class="fw-bold">{{ c.name }}</span>
+    </div>
+    <div>
+      <button class="btn btn-danger btn-sm" (click)="deleteCharacter(c.id)">
+        X
+      </button>
+    </div>
+  </li>
+</ul>
